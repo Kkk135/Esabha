@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<form>
+  <input type="text" name="si" value="{{ request.GET.si }}">
+  <input type="submit" value="search">
+</form>
+{%  for n in post_list %}
+<h2>{{n.subject}} :: {{n.creat_date | date:"d/y/m"}}
+<a href="/social/post/{{n.id}}">Read more</a>
+<a href="/social/post/delete/{{n.id}}">Delete</a>
+</h2>
+{% endfor %}
+{% endblock %}

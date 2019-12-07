@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<form>
+  <input type="text" name="si" value="{{request.GET.si}}">
+  <input type="submit" value="search">
+</form>
+{%  for n in profile_list %}
+<h2>{{n.name}} </h2>
+    <h2>{{n.address}}</h2>
+<a href="/social/post/{{n.id}}">Read more</a>
+<a href="/social/profile/follow/{{n.id}}">follow</a>
+
+{% endfor %}
+{% endblock %}

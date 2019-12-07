@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<h2>{{n.subject}} :: {{n.creat_date | date:"d/y/m"}}
+<a href="/social/post">back</a>
+</h2>
+{% endfor %}
+{% endblock %}
